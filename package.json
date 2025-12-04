@@ -1,0 +1,24 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "Tutorial electron",
+  "homepage": "https://github.com/thainarapires/electron#readme",
+  "bugs": {
+    "url": "https://github.com/thainarapires/electron/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thainarapires/electron.git"
+  },
+  "license": "MIT",
+  "author": "Thainara Pires da Silva",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^39.2.5"
+  }
+}
