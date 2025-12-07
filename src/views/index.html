@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    /> PRA N APARECER NO CONSOLE OS LOG-->
     <title>SP Assistência TV</title>
 </head>
 <body>
     <h1>Hello Electron</h1>
-</body>
-</html>
+    <button onclick="logar()">Janela secundaria</button>
+    <button onclick="info()">Informacoes</button>
+    <button onclick="warning()">Aviso</button>
+    <button onclick="select()">Selecionar</button>
+   <footer> 
+    <p id="dataAtual"> </p>
+   </footer>
+   <script src="renderer.js"></script>
+</body>                
+</html>                           
