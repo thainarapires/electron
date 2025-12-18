@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    /> PRA N APARECER NO CONSOLE OS LOG-->
-    <title>SP Assistência TV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href="../styles/index.css">
 </head>
+
 <body>
-    <h1>Hello Electron</h1>
-    <button onclick="logar()">Janela secundaria</button>
-    <button onclick="info()">Informacoes</button>
-    <button onclick="warning()">Aviso</button>
-    <button onclick="select()">Selecionar</button>
-   <footer> 
-    <p id="dataAtual"> </p>
-   </footer>
-   <script src="renderer.js"></script>
-</body>                
-</html>                           
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="img-logo">
+        <img src="../public/img/logo.png" width="150">
+      </div>
+
+      <div>
+        <h1 style="display: flex; align-items: center; justify-content: space-around; color: black;"> Faça seu login
+        </h1>
+      </div>
+
+      <label>Login</label>
+      <input type="text" id="loginUsuario" placeholder="">
+
+      <label>Senha</label>
+      <input type="password" id="senhaUsuario" placeholder="">
+
+      <button class="btn-primary" onclick="logar()">ENTRAR</button>
+
+      <a class="link" href="#">Se está com problemas de conexão, acesse aqui!</a>
+    </div>
+
+  </div>
+ <script src="renderer.js"></script>
+</body>
+
+</html>

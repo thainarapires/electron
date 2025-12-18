@@ -1,4 +1,6 @@
-//console.log("Processo Principal")
+require('electron-reload')(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`)
+})
 console.log(`Electron: ${process.versions.electron}`)
 const { app, BrowserWindow, nativeTheme, Menu, shell, ipcMain, dialog } = require('electron')
 const { error } = require('node:console')
@@ -12,7 +14,7 @@ const loginWindow = () => {
     width: 800,
     height: 600,
     icon: './src/public/img/logo.png',
-    resizable: false,
+    resizable: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -70,7 +72,6 @@ app.whenReady().then(() => {
   })
 
   ipcMain.on('renderer-message', (event, message) => {
-    console.log(`Processo principal recebeu uma mensagem: ${message}`)
     event.reply('main-message', 'ola renderizadorrrr')
   })
 
